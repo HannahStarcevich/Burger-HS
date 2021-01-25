@@ -1,21 +1,34 @@
-var mysql = require("mysql");
-const inquirer = require("inquirer");
-const {
-    promisify
-} = require("util")
+// set up express 
+var express = require("express");
 
-var connection = mysql.createConnection({
-    host: "localhost",
+var PORT = process.env.PORT || 8080;
 
-    port: 3306,
+var app = express();
 
-    user: "root",
+// serve content from the public directory 
+app.use(express.static("public"));
 
-    password: "password",
-    database: "burger_db"
-});
+// parse application body as JSON
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.json());
 
-connection.connect(function (err) {
-    if (err) throw err;
-    console.log("connected as id " + connection.threadId + "\n");
+// set handlebars
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({
+    defaultLayout: "main"
+}));
+app.set("view engine", "handlebars");
+
+// import routes and give the server access to them
+var routes = require("./controllers/burgerController.js");
+
+app.use(routes);
+
+// start the server to listen for client requests
+app.listen(PORT, function () {
+    // Log (server-side) when our server has started
+    console.log("Server listening on: http://localhost:" + PORT);
 });
