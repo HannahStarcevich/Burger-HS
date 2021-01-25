@@ -3,7 +3,7 @@ CREATE database burger_db;
 
 USE burger_db;
 
-CREATE TABLE burger (
+CREATE TABLE burgers (
   id INT AUTO_INCREMENT,
   burger_name VARCHAR(75),
   devoured BOOLEAN, 
