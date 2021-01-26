@@ -1,9 +1,6 @@
 // set up routes using CRUD framework
 
 var express = require("express");
-const {
-    end
-} = require("../config/connection.js");
 
 var router = express.Router();
 
@@ -12,11 +9,13 @@ var burger = require("../models/burger.js");
 // create all routes and set up logic
 
 router.get("/", function (req, res) {
+
     burger.all(function (data) {
         var hbsObject = {
-            bugers: data
+            burgers: data
         }
-        console.log(hbsObject);
+        // console.log(hbsObject);
+        // console.log("pickles")
         res.render("index", hbsObject);
     })
 })

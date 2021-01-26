@@ -1,3 +1,20 @@
 body {
-    background: salmon;
+    background: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+#burgersReady,
+#addBurgerForm,
+#burgersEaten {
+    float: left;
+    padding: 3%;
+}
+
+img {
+    width: 20vw;
+
 }
