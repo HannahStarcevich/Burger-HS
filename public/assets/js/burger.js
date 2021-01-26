@@ -1,8 +1,8 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
     $(".change-devour").on("click", function (event) {
-        var id = $(this).data("htmlid");
-        var readyToEat = $(this).data("hello");
+        var id = $(this).data("id");
+        var readyToEat = $(this).data("devoured");
 
         var theOpposite = 0;
         if (readyToEat === 0) {
@@ -47,18 +47,4 @@ $(function () {
         );
     });
 
-    // $(".delete-burger").on("click", function (event) {
-    //     var id = $(this).data("id");
-
-    //     // Send the DELETE request.
-    //     $.ajax("/api/burgers/" + id, {
-    //         type: "DELETE"
-    //     }).then(
-    //         function () {
-    //             console.log("deleted cat", id);
-    //             // Reload the page to get the updated list
-    //             location.reload();
-    //         }
-    //     );
-    // });
 });
