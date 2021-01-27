@@ -3,7 +3,7 @@ This application features a burger logger with MySQL, Node, Express, Handlebars 
 
 ## Links:
 * GitHub: https://github.com/HannahStarcevich/Burger-HS
-* Live Site on Heroku: https://hs-burger-app.herokuapp.com/
+* Live Site on Heroku: https://burger-app-hs.herokuapp.com/
 
 ## Table of Contents
 * [Installation](#installation)
