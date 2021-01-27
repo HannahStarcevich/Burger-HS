@@ -16,6 +16,8 @@ Open the application in the browser and enter burgers into the list.
 
 ## Usage
 Utilize this application to generate a list of hamburgers that are "ready to eat" or already eaten or "devoured". From the burgers that are "ready to eat" select those that you want to "devour!". The selected burgers will then move to the devoured list. 
+![Burger Site Image](live-site.png)
+    
 
 ## Contributing
 HannahStarcevich
